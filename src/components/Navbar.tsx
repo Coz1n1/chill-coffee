@@ -4,15 +4,37 @@ import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import { BiCoffeeTogo } from "react-icons/bi";
 import { AiOutlineMenu } from "react-icons/ai";
 import MobileMenu from "./MobileMenu";
+import Switcher from "../Switcher";
 
 const Y_OFFSET = 70;
 
 const Navbar = () => {
   const [showMobile, setShowMobile] = useState(false);
+  const [showBackground, setShowBackground] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= Y_OFFSET) {
+        setShowBackground(true);
+      } else {
+        setShowBackground(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="fixed w-screen z-10">
-      <div className="flex items-center justify-between flex-row px-4 lg:px-12 py-6 bg-zinc-800/60 text-white transition duration-500">
+      <div
+        className={`flex items-center justify-between flex-row px-4 lg:px-12 text-white transition duration-700 ${
+          showBackground ? "bg-black py-2" : "bg-zinc-800/60 py-6"
+        }`}
+      >
         <div className="flex flex-row items-center">
           <img
             src={require("../images/cup_logo.png")}
@@ -27,14 +49,7 @@ const Navbar = () => {
           <NavItem name="Recipes" />
           <NavItem name="Types" />
           <span className="text-3xl">|</span>
-          <div className="flex flex-row gap-2">
-            <div className="border-2 border-white flex items-center justify-center w-8 h-8 rounded-full bg-green-500 cursor-pointer">
-              <BsFillMoonFill size={22} />
-            </div>
-            <div className="border-2 border-white flex items-center justify-center w-8 h-8 rounded-full cursor-pointer">
-              <BsFillSunFill size={22} />
-            </div>
-          </div>
+          <Switcher />
           <BiCoffeeTogo size={32} />
         </div>
         <div

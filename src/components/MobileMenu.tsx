@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import NavItem from "./NavItem";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import { BiCoffeeTogo } from "react-icons/bi";
+import Switcher from "../Switcher";
 
 interface MobileProps {
   visible?: boolean;
@@ -13,20 +14,15 @@ const MobileMenu: FC<MobileProps> = ({ visible }) => {
   }
 
   return (
-    <div className="flex flex-col z-20 border-2 border-gray-600 absolute top-8 right-1 px-4 py-2 w-48 items-center">
+    <div className="flex flex-col z-44 border-2 border-gray-600 absolute top-12 right-1 px-4 py-2 w-64 items-center bg-black rounded-t-xl rounded-b-xl">
       <NavItem name="Products" />
       <NavItem name="About" />
       <NavItem name="Recipes" />
       <NavItem name="Types" />
       <div className="flex flex-row gap-2 mt-4">
-        <div className="border-2 border-white flex items-center justify-center w-8 h-8 rounded-full bg-green-500 cursor-pointer">
-          <BsFillMoonFill size={22} />
-        </div>
-        <div className="border-2 border-white flex items-center justify-center w-8 h-8 rounded-full cursor-pointer">
-          <BsFillSunFill size={22} />
-        </div>
+        <Switcher />
       </div>
-      <BiCoffeeTogo size={22} />
+      <BiCoffeeTogo size={32} className="mt-4" />
     </div>
   );
 };
