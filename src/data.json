@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Lavazza Qualita Oro",
+    "price": 50,
+    "type": "Arabica",
+    "intensity": "5/10",
+    "image": "/imgs/products/lavazza_oro.png"
+  },
+  {
+    "id": 2,
+    "name": "Lavazza Barista",
+    "price": 50,
+    "type": "Arabica",
+    "intensity": "6/10",
+    "image": "/imgs/products/lavazza_barista.png"
+  },
+  {
+    "id": 3,
+    "name": "Lavazza Qualita Oro",
+    "price": 50,
+    "type": "Arabica",
+    "intensity": "5/10",
+    "image": "/imgs/products/lavazza_oro.png"
+  },
+  {
+    "id": 4,
+    "name": "Lavazza Qualita Oro",
+    "price": 50,
+    "type": "Arabica",
+    "intensity": "5/10",
+    "image": "/imgs/products/lavazza_oro.png"
+  },
+  {
+    "id": 5,
+    "name": "Lavazza Qualita Oro",
+    "price": 50,
+    "type": "Arabica",
+    "intensity": "5/10",
+    "image": "/imgs/products/lavazza_oro.png"
+  },
+  {
+    "id": 6,
+    "name": "Lavazza Qualita Oro",
+    "price": 50,
+    "type": "Arabica",
+    "intensity": "5/10",
+    "image": "/imgs/products/lavazza_oro.png"
+  }
+]

@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from "react";
 import NavItem from "./NavItem";
-import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 import { BiCoffeeTogo } from "react-icons/bi";
 import { AiOutlineMenu } from "react-icons/ai";
 import MobileMenu from "./MobileMenu";
 import Switcher from "../Switcher";
+import { useCart } from "../context/shoppingContext";
 
 const Y_OFFSET = 70;
 
 const Navbar = () => {
   const [showMobile, setShowMobile] = useState(false);
   const [showBackground, setShowBackground] = useState(false);
+  const { openCart, cartQuantity } = useCart();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,6 +52,7 @@ const Navbar = () => {
           <span className="text-3xl">|</span>
           <Switcher />
           <BiCoffeeTogo size={32} />
+          <span className="text-xl text-white">{cartQuantity}</span>
         </div>
         <div
           className="lg:hidden flex items-center relative"
