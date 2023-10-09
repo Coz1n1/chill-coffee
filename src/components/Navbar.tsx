@@ -51,15 +51,28 @@ const Navbar = () => {
           <NavItem name="Types" />
           <span className="text-3xl">|</span>
           <Switcher />
-          <BiCoffeeTogo size={32} />
-          <span className="text-xl text-white">{cartQuantity}</span>
+          <div className="relative w-8 cursor-pointer" onClick={openCart}>
+            <BiCoffeeTogo size={32} />
+            <span className="text-xl text-white bg-blue-700 w-6 h-6 rounded-full flex items-center justify-center absolute -translate-y-10 translate-x-4">
+              {cartQuantity}
+            </span>
+          </div>
         </div>
-        <div
-          className="lg:hidden flex items-center relative"
-          onClick={() => setShowMobile(!showMobile)}
-        >
-          <AiOutlineMenu size={32} className="cursor-pointer" />
-          <MobileMenu visible={showMobile} />
+        <div className="lg:hidden flex flex-row items-center relative gap-4">
+          <div
+            className="lg:hidden flex"
+            onClick={() => setShowMobile(!showMobile)}
+          >
+            <AiOutlineMenu size={32} className="cursor-pointer" />
+            <MobileMenu visible={showMobile} />
+          </div>
+          <Switcher />
+          <div className="relative w-8" onClick={openCart}>
+            <BiCoffeeTogo size={32} />
+            <span className="text-xl text-white bg-blue-700 w-6 h-6 rounded-full flex items-center justify-center absolute -translate-y-10 translate-x-4">
+              {cartQuantity}
+            </span>
+          </div>
         </div>
       </div>
     </div>

@@ -13,9 +13,9 @@ const Product: FC<ProductProps> = ({ data }) => {
 
   const quantity = getQuantity(data.id);
   return (
-    <div className="lg:w-[430px] border-2 border-amber-500 flex flex-row bg-gradient-to-r from-zinc-700 rounded-lg">
+    <div className="w-[200px] h-[430px] md:h-auto lg:w-[430px] border-2 border-amber-500 flex flex-col lg:flex-row bg-gradient-to-r from-zinc-700 rounded-lg">
       <div className="w-full flex items-center justify-center ">
-        <img src={data.image} alt="Product" className="w-[80%]" />
+        <img src={data.image} alt="Product" className="w-[160px]" />
       </div>
       <div className="px-2 py-2 w-full">
         <div className="w-full text-left dark:text-white">
@@ -35,7 +35,7 @@ const Product: FC<ProductProps> = ({ data }) => {
         <div className="flex flex-row w-full pt-4 pb-2">
           <div
             className="w-1/5 bg-amber-500 flex items-center justify-center rounded-tl-md rounded-bl-md py-2 cursor-pointer"
-            onClick={() => decreaseQuantity(data.id)}
+            onClick={() => decreaseQuantity(data.id, data.price)}
           >
             <AiOutlineMinus className="text-white" />
           </div>
@@ -44,7 +44,7 @@ const Product: FC<ProductProps> = ({ data }) => {
           </div>
           <div
             className="w-1/5 bg-amber-500 flex items-center justify-center rounded-tr-md rounded-br-md py-2 cursor-pointer"
-            onClick={() => increaseQuantity(data.id)}
+            onClick={() => increaseQuantity(data.id, data.price)}
           >
             <AiOutlinePlus className="text-white" />
           </div>

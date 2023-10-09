@@ -19,10 +19,6 @@ const MobileMenu: FC<MobileProps> = ({ visible }) => {
       <NavItem name="About" />
       <NavItem name="Recipes" />
       <NavItem name="Types" />
-      <div className="flex flex-row gap-2 mt-4">
-        <Switcher />
-      </div>
-      <BiCoffeeTogo size={32} className="mt-4" />
     </div>
   );
 };

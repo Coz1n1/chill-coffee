@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Lavazza Qualita Oro",
-    "price": 50,
+    "price": 49.99,
     "type": "Arabica",
     "intensity": "5/10",
     "image": "/imgs/products/lavazza_oro.png"
@@ -10,7 +10,7 @@
   {
     "id": 2,
     "name": "Lavazza Barista",
-    "price": 50,
+    "price": 49.99,
     "type": "Arabica",
     "intensity": "6/10",
     "image": "/imgs/products/lavazza_barista.png"
@@ -41,6 +41,22 @@
   },
   {
     "id": 6,
+    "name": "Lavazza Qualita Oro",
+    "price": 50,
+    "type": "Arabica",
+    "intensity": "5/10",
+    "image": "/imgs/products/lavazza_oro.png"
+  },
+  {
+    "id": 7,
+    "name": "Lavazza Qualita Oro",
+    "price": 50,
+    "type": "Arabica",
+    "intensity": "5/10",
+    "image": "/imgs/products/lavazza_oro.png"
+  },
+  {
+    "id": 8,
     "name": "Lavazza Qualita Oro",
     "price": 50,
     "type": "Arabica",

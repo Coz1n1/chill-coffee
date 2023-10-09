@@ -1,4 +1,5 @@
 import { createContext, useContext, ReactNode, useState } from "react";
+import ShoppingCart from "../components/ShoppingCart";
 
 type shoppingProviderProps = {
   children: ReactNode;
@@ -15,9 +16,9 @@ type ShoppingContext = {
   cartQuantity: number;
   cartItems: CartItem[];
   getQuantity: (id: number) => number;
-  increaseQuantity: (id: number) => void;
-  decreaseQuantity: (id: number) => void;
-  removeFromCart: (id: number) => void;
+  increaseQuantity: (id: number, price: number) => void;
+  decreaseQuantity: (id: number, price: number) => void;
+  removeFromCart: (id: number, quantity: number, price: number) => void;
 };
 
 const ShoppingContext = createContext({} as ShoppingContext);
@@ -29,6 +30,7 @@ export function useCart() {
 export function ShoppingProvider({ children }: shoppingProviderProps) {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [totalAmount, setTotalAmount] = useState(0);
 
   const cartQuantity = cartItems.reduce(
     (quantity, item) => item.quantity + quantity,
@@ -42,7 +44,7 @@ export function ShoppingProvider({ children }: shoppingProviderProps) {
     return cartItems.find((item) => item.id === id)?.quantity || 0;
   }
 
-  function increaseQuantity(id: number) {
+  function increaseQuantity(id: number, price: number) {
     setCartItems((currItems) => {
       if (currItems.find((item) => item.id === id) == null) {
         return [...currItems, { id, quantity: 1 }];
@@ -56,9 +58,10 @@ export function ShoppingProvider({ children }: shoppingProviderProps) {
         });
       }
     });
+    setTotalAmount((totalAmount) => (totalAmount += price));
   }
 
-  function decreaseQuantity(id: number) {
+  function decreaseQuantity(id: number, price: number) {
     setCartItems((currItems) => {
       if (currItems.find((item) => item.id === id)?.quantity === 1) {
         return currItems.filter((item) => item.id !== id);
@@ -72,12 +75,14 @@ export function ShoppingProvider({ children }: shoppingProviderProps) {
         });
       }
     });
+    setTotalAmount((totalAmount) => (totalAmount -= price));
   }
 
-  function removeFromCart(id: number) {
+  function removeFromCart(id: number, quantity: number, price: number) {
     setCartItems((currItems) => {
       return currItems.filter((item) => item.id !== id);
     });
+    setTotalAmount((totalAmount) => (totalAmount -= quantity * price));
   }
 
   return (
@@ -94,6 +99,7 @@ export function ShoppingProvider({ children }: shoppingProviderProps) {
       }}
     >
       {children}
+      <ShoppingCart isOpen={isOpen} totalAmount={totalAmount} />
     </ShoppingContext.Provider>
   );
 }
