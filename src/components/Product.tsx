@@ -50,9 +50,16 @@ const Product: FC<ProductProps> = ({ data }) => {
           </div>
         </div>
         <div className="w-full pb-2">
-          <button className="w-full py-1 text-white rounded-md bg-amber-500 font-bold font-croissant ">
-            Add To Cart
-          </button>
+          {quantity > 0 ? (
+            <button
+              className="w-full py-1 text-white rounded-md bg-red-500 font-bold font-croissant"
+              onClick={() => removeFromCart(data.id, quantity, data.price)}
+            >
+              Remove
+            </button>
+          ) : (
+            <div className="w-full py-1 invisible">t</div>
+          )}
         </div>
       </div>
     </div>

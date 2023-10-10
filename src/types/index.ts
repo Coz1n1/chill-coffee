@@ -6,3 +6,11 @@ export type ProductType = {
   intensity: string;
   image: string;
 };
+
+export type RecipeType = {
+  id: number;
+  name: string;
+  instruction: string[];
+  ingredients: string[];
+  prep_time: string;
+};

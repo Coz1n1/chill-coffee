@@ -40,7 +40,7 @@ const Marketplace = () => {
           <Category name="Arabica" />
           <Category name="Robusta" />
         </div>
-        <div className="w-full flex items-center justify-center mt-4 flex-col pb-24">
+        <div className="w-full flex items-center justify-center mt-4 flex-col pb-16">
           <div className="lg:w-[1000px] flex flex-wrap items-center justify-center mt-4 gap-2 lg:gap-8">
             {displayProducts}
           </div>
