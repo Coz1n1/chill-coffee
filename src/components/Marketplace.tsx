@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Category from "./Category";
 import PRODUCTS from "../data.json";
 import Product from "./Product";
 import ReactPaginate from "react-paginate";
@@ -26,7 +25,7 @@ const Marketplace = () => {
   });
 
   return (
-    <div className="overflow-y-hidden">
+    <div className="overflow-y-hidden" id="products">
       <div className="flex flex-col pt-12">
         <div className="flex flex-col text-center">
           <h1 className="text-3xl dark:text-white text-black font-croissant font-bold">

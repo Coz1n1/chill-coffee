@@ -17,7 +17,7 @@ const Recipes = () => {
   };
 
   return (
-    <div className="overflow-hidden w-screen pb-24">
+    <div className="overflow-hidden w-screen pb-24" id="recipes">
       <div className="text-3xl text-white font-croissant text-center px-2">
         Our Most Popular Recipes
       </div>

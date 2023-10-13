@@ -45,9 +45,9 @@ const Navbar = () => {
           <span className="font-bold text-2xl">ChillCoffee</span>
         </div>
         <div className="hidden lg:flex flex-row items-center gap-8 text-white">
-          <NavItem name="Products" />
-          <NavItem name="About" />
-          <NavItem name="Recipes" />
+          <NavItem name="Products" navigateTo="products" />
+          <NavItem name="About" navigateTo="about" />
+          <NavItem name="Recipes" navigateTo="recipes" />
           <span className="text-3xl">|</span>
           <Switcher />
           <div className="relative w-8 cursor-pointer" onClick={openCart}>

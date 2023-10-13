@@ -2,7 +2,10 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className=" h-[60%] w-screen flex items-center justify-center relative">
+    <div
+      className=" h-[60%] w-screen flex items-center justify-center relative"
+      id="about"
+    >
       <div className="flex flex-col items-center justify-center mt-12 max-w-[1100px] px-2">
         <h1 className="text-4xl font-bold dark:text-white text-black font-croissant text-center px-4 pb-2">
           Every Cup Made With Passion
