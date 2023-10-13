@@ -1,4 +1,4 @@
-published project: https://effulgent-sherbet-9d995c.netlify.app/ :)
+published project: https://main--effulgent-sherbet-9d995c.netlify.app/ :)
 
 # Getting Started with Create React App
 
