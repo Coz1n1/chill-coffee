@@ -1,4 +1,4 @@
-IN PROGRESS
+published project: https://effulgent-sherbet-9d995c.netlify.app/ :)
 
 # Getting Started with Create React App
 
