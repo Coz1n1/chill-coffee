@@ -13,9 +13,9 @@ const Product: FC<ProductProps> = ({ data }) => {
 
   const quantity = getQuantity(data.id);
   return (
-    <div className="w-[200px] h-[430px] md:h-auto lg:w-[430px] border-2 border-amber-500 flex flex-col lg:flex-row bg-gradient-to-r from-zinc-700 rounded-lg">
+    <div className="w-[200px] h-[430px] md:h-auto lg:w-[430px] border-2 border-amber-500 flex flex-col lg:flex-row dark:bg-gradient-to-r dark:from-zinc-700 rounded-lg">
       <div className="w-full flex items-center justify-center ">
-        <img src={data.image} alt="Product" className="w-[160px]" />
+        <img src={data.image} alt="Product" className="w-[160px] h-[180px]" />
       </div>
       <div className="px-2 py-2 w-full">
         <div className="w-full text-left dark:text-white">
@@ -39,7 +39,7 @@ const Product: FC<ProductProps> = ({ data }) => {
           >
             <AiOutlineMinus className="text-white" />
           </div>
-          <div className=" text-black bg-white flex items-center justify-center w-3/5">
+          <div className=" text-black dark:bg-white bg-zinc-100 flex items-center justify-center w-3/5">
             {quantity}
           </div>
           <div

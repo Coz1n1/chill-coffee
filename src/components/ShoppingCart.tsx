@@ -1,7 +1,8 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC } from "react";
 import { useCart } from "../context/shoppingContext";
 import { AiOutlineClose } from "react-icons/ai";
-import Products from "../data.json";
+import PRODUCTS from "../data.json";
+import { formatCurrency } from "../utilities/formatCurrency";
 import CartItem from "./CartItem";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
@@ -18,7 +19,7 @@ const ShoppingCart: FC<ShoppingCartProps> = ({ isOpen, totalAmount }) => {
   }
 
   return (
-    <div className="flex flex-col dark:bg-zinc-600 lg:w-[40%] right-0 top-0 z-20 fixed h-screen overflow-y-auto">
+    <div className="flex flex-col dark:bg-zinc-600 w-screen md:w-[40%] right-0 top-0 z-50 fixed h-screen overflow-y-auto">
       <div className="flex flex-row items-center justify-between px-4 py-4">
         <span className="text-xl text-white font-croissant font-bold">
           ShoppingCart
@@ -34,7 +35,15 @@ const ShoppingCart: FC<ShoppingCartProps> = ({ isOpen, totalAmount }) => {
           ))}
           <div className="w-full text-right pt-4 border-t-2 border-t-amber-500">
             <span className="text-xl font-bold dark:text-white">
-              Total<span className="ml-2">{totalAmount}zł</span>
+              Total
+              <span className="ml-2">
+                {formatCurrency(
+                  cartItems.reduce((total, cartItem) => {
+                    const item = PRODUCTS.find((i) => i.id === cartItem.id);
+                    return total + (item?.price || 0) * cartItem.quantity;
+                  }, 0)
+                )}
+              </span>
             </span>
             <button className="flex flex-row items-center text-xl w-full rounded-lg py-2 bg-lime-300 justify-center gap-2 mt-2">
               <AiOutlineShoppingCart size={25} />

@@ -1,4 +1,5 @@
 import React from "react";
+import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Billboard = () => {
   return (
@@ -8,11 +9,17 @@ const Billboard = () => {
         alt="billboard"
         className="w-full object-cover h-full"
       />
-      <div className="absolute top-72 w-full text-white flex flex-col">
+      <div className="absolute top-56 w-full text-white flex flex-col items-center justify-center">
         <div className="flex flex-col w-full items-center justify-center flex-wrap">
-          <div className="text-9xl">BIG LOGO</div>
+          <div className="w-48 bg-white rounded-3xl text-black py-2 text-center mb-4 shadow-2xl font-bold animate-bounce">
+            We are now public!
+          </div>
+          <div className="md:text-9xl text-5xl w-full flex flex-wrap items-center justify-center">
+            <span className="font-bold text-white">CHILL</span>
+            <span className="font-bold text-amber-500">COFFEE</span>
+          </div>
           <div className="flex flex-row gap-4 w-full items-center justify-center flex-wrap font-bold">
-            <span className="text-6xl text-center">
+            <span className="md:text-6xl text-4xl text-center">
               Through coffee to the heart
             </span>
           </div>
@@ -23,8 +30,9 @@ const Billboard = () => {
             </span>
           </div>
           <div className="">
-            <button className="border-2 border-amber-500 w-48 py-4 text-zinc-300">
+            <button className="w-48 py-4 text-white bg-black rounded-lg shadow-xl font-bold flex items-center justify-center gap-2">
               Learn More
+              <AiOutlineArrowRight />
             </button>
           </div>
         </div>

@@ -10,57 +10,57 @@
   {
     "id": 2,
     "name": "Lavazza Barista",
-    "price": 49.99,
+    "price": 53.89,
     "type": "Arabica",
     "intensity": "6/10",
     "image": "/imgs/products/lavazza_barista.png"
   },
   {
     "id": 3,
-    "name": "Lavazza Qualita Oro",
-    "price": 50,
+    "name": "Barber Coffee",
+    "price": 89.99,
     "type": "Arabica",
-    "intensity": "5/10",
-    "image": "/imgs/products/lavazza_oro.png"
+    "intensity": "6/10",
+    "image": "/imgs/products/barber-coffee.jpg"
   },
   {
     "id": 4,
-    "name": "Lavazza Qualita Oro",
-    "price": 50,
-    "type": "Arabica",
-    "intensity": "5/10",
-    "image": "/imgs/products/lavazza_oro.png"
+    "name": "Papua New Guinea",
+    "price": 103.79,
+    "type": "Robusta",
+    "intensity": "8/10",
+    "image": "/imgs/products/papua-new-guinea.png"
   },
   {
     "id": 5,
-    "name": "Lavazza Qualita Oro",
-    "price": 50,
+    "name": "Vaspiatta Espresso",
+    "price": 89.95,
     "type": "Arabica",
-    "intensity": "5/10",
-    "image": "/imgs/products/lavazza_oro.png"
+    "intensity": "7/10",
+    "image": "/imgs/products/vaspiatta-espresso.png"
   },
   {
     "id": 6,
-    "name": "Lavazza Qualita Oro",
-    "price": 50,
+    "name": "Vaspiatta Italiano",
+    "price": 32.49,
     "type": "Arabica",
-    "intensity": "5/10",
-    "image": "/imgs/products/lavazza_oro.png"
+    "intensity": "3/10",
+    "image": "/imgs/products/vaspiatta-italiana.png"
   },
   {
     "id": 7,
-    "name": "Lavazza Qualita Oro",
-    "price": 50,
+    "name": "Ls Coffee",
+    "price": 102.99,
     "type": "Arabica",
-    "intensity": "5/10",
-    "image": "/imgs/products/lavazza_oro.png"
+    "intensity": "9/10",
+    "image": "/imgs/products/ls-coffee.webp"
   },
   {
     "id": 8,
-    "name": "Lavazza Qualita Oro",
-    "price": 50,
-    "type": "Arabica",
-    "intensity": "5/10",
-    "image": "/imgs/products/lavazza_oro.png"
+    "name": "Wet Polished",
+    "price": 55.59,
+    "type": "Robusta",
+    "intensity": "9/10",
+    "image": "/imgs/products/wietnam-wet-polished.png"
   }
 ]

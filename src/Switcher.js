@@ -15,7 +15,7 @@ export default function Switcher() {
 
   return (
     <>
-      <div className="border-2 flex items-center justify-center w-12 h-12 rounded-lg bg-green-500 cursor-pointer">
+      <div className="border-2 flex items-center justify-center w-12 h-12 rounded-lg bg-green-500 cursor-pointer text-white">
         <DarkModeSwitch
           checked={darkSide}
           onChange={toggleDarkMode}

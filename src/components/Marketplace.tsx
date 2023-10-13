@@ -10,20 +10,20 @@ import {
 
 const Marketplace = () => {
   const [pageNumber, setPageNumber] = useState(0);
+  const [filter, setFilter] = useState<string>("");
 
   const productsPerPage = 4;
   const pageVisited = pageNumber * productsPerPage;
-
-  const displayProducts = PRODUCTS.slice(
-    pageVisited,
-    pageVisited + productsPerPage
-  ).map((e, i) => <Product data={e} key={i} />);
 
   const pageCount = Math.ceil(PRODUCTS.length / productsPerPage);
 
   const handleChangePage = ({ selected }: any) => {
     setPageNumber(selected);
   };
+
+  const filteredProducts = PRODUCTS.filter((e) => {
+    return e.type.toLowerCase().includes(filter);
+  });
 
   return (
     <div className="overflow-y-hidden">
@@ -36,13 +36,33 @@ const Marketplace = () => {
             select your favourite product and enjoy!
           </h1>
         </div>
-        <div className="flex flex-row gap-8 w-full items-center justify-center mt-8">
-          <Category name="Arabica" />
-          <Category name="Robusta" />
+        <div className="flex flex-row gap-8 w-full items-center justify-center mt-8 px-4">
+          <button
+            onClick={() => setFilter("")}
+            className="w-48 py-4 text-white bg-amber-500 rounded-lg font-bold font-croissant border-2 border-amber-500 hover:border-2 hover:border-white"
+          >
+            All
+          </button>
+          <button
+            onClick={() => setFilter("arabica")}
+            className="w-48 py-4 text-white bg-amber-500 rounded-lg font-bold font-croissant border-2 border-amber-500 hover:border-2 hover:border-white"
+          >
+            Arabica
+          </button>
+          <button
+            onClick={() => setFilter("robusta")}
+            className="w-48 py-4 text-white bg-amber-500 rounded-lg font-bold font-croissant border-2 border-amber-500 hover:border-2 hover:border-white"
+          >
+            Robusta
+          </button>
         </div>
-        <div className="w-full flex items-center justify-center mt-4 flex-col pb-16">
+        <div className="w-full flex items-center justify-center mt-4 flex-col pb-16 z-20">
           <div className="lg:w-[1000px] flex flex-wrap items-center justify-center mt-4 gap-2 lg:gap-8">
-            {displayProducts}
+            {filteredProducts
+              .slice(pageVisited, pageVisited + productsPerPage)
+              .map((product, i) => (
+                <Product data={product} key={i} />
+              ))}
           </div>
           <div>
             <ReactPaginate
@@ -50,8 +70,8 @@ const Marketplace = () => {
               nextLabel={<BsFillArrowRightSquareFill size={32} />}
               pageCount={pageCount}
               onPageChange={handleChangePage}
-              containerClassName="flex flex-row py-8 gap-4 text-amber-500 items-center [&>a]:bg-white [&>a]:border-black"
-              activeClassName="text-white"
+              containerClassName="flex flex-row pt-8 mb-16 gap-4 text-amber-500 items-center"
+              activeClassName="dark:text-white text-black"
             />
           </div>
         </div>

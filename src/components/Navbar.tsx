@@ -30,7 +30,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="fixed w-screen z-10">
+    <div className="fixed w-screen z-40">
       <div
         className={`flex items-center justify-between flex-row px-4 lg:px-12 text-white transition duration-700 ${
           showBackground ? "bg-black py-2" : "bg-zinc-800/60 py-6"
@@ -44,11 +44,10 @@ const Navbar = () => {
           />
           <span className="font-bold text-2xl">ChillCoffee</span>
         </div>
-        <div className="hidden lg:flex flex-row items-center gap-8">
+        <div className="hidden lg:flex flex-row items-center gap-8 text-white">
           <NavItem name="Products" />
           <NavItem name="About" />
           <NavItem name="Recipes" />
-          <NavItem name="Types" />
           <span className="text-3xl">|</span>
           <Switcher />
           <div className="relative w-8 cursor-pointer" onClick={openCart}>

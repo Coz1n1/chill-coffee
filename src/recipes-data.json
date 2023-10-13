@@ -8,7 +8,8 @@
       "Step 3 [Optional] - Dust the surface with the cocoa powder"
     ],
     "ingredients": ["ground espresso", "milk"],
-    "prep_time": "2-3 minutes"
+    "prep_time": "2-3 minutes",
+    "image": "/imgs/recipes/cappuccino.jpeg"
   },
   {
     "id": 2,
@@ -24,7 +25,8 @@
       "ice",
       "milk"
     ],
-    "prep_time": "5 minutes"
+    "prep_time": "5 minutes",
+    "image": "/imgs/recipes/iced-latte.jpg"
   },
   {
     "id": 3,
@@ -34,7 +36,8 @@
       " Step 2 - steam the milk and add to your prepared mixture"
     ],
     "ingredients": ["ground espresso", "milk", "1 tsp drinking chocolate"],
-    "prep_time": "3 minutes"
+    "prep_time": "3 minutes",
+    "image": "/imgs/recipes/mocha.png"
   },
   {
     "id": 4,
@@ -44,7 +47,8 @@
       "Step 2 - Finish with a little bit of foam on top."
     ],
     "ingredients": ["40ml espresso", "40ml steam milk"],
-    "prep_time": "5 minutes"
+    "prep_time": "5 minutes",
+    "image": "/imgs/recipes/cortado.jpg"
   },
   {
     "id": 5,
@@ -62,6 +66,7 @@
       "coffee liqueur",
       "coffee beans(optional)"
     ],
-    "prep_time": "10 minutes"
+    "prep_time": "10 minutes",
+    "image": "/imgs/recipes/espresso-martini.jpg"
   }
 ]

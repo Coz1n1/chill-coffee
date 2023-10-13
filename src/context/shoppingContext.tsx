@@ -82,7 +82,8 @@ export function ShoppingProvider({ children }: shoppingProviderProps) {
     setCartItems((currItems) => {
       return currItems.filter((item) => item.id !== id);
     });
-    setTotalAmount((totalAmount) => (totalAmount -= quantity * price));
+    const cost = quantity * price;
+    setTotalAmount((totalAmount) => (totalAmount -= cost));
   }
 
   return (

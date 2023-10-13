@@ -13,4 +13,5 @@ export type RecipeType = {
   instruction: string[];
   ingredients: string[];
   prep_time: string;
+  image: string;
 };
