@@ -19,7 +19,7 @@ const ShoppingCart: FC<ShoppingCartProps> = ({ isOpen, totalAmount }) => {
   }
 
   return (
-    <div className="flex flex-col dark:bg-zinc-600 w-screen md:w-[40%] right-0 top-0 z-50 fixed h-screen overflow-y-auto">
+    <div className="flex flex-col bg-zinc-600 w-screen md:w-[40%] right-0 top-0 z-50 fixed h-screen overflow-y-auto">
       <div className="flex flex-row items-center justify-between px-4 py-4">
         <span className="text-xl text-white font-croissant font-bold">
           ShoppingCart
